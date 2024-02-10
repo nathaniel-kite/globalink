@@ -6,25 +6,92 @@
     color: blue;
 }
 
-#yoyoyo{
-    color: green;
-    border-width: 3px;
-    border-color: green;
-    align-items: center;
+#leftPartTop {
+    max-width: 600px;
 }
 
-#container1{
+/* #graphic1 {
+    display: block;
+    height: auto;
+}
+
+/* #container1{
     display: grid;
     align-items: center; 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 750px;
+    grid-template-columns: 1fr 0.8fr;
     column-gap: 5px;
+} */
+
+#blueDiv {
+    background-color: #4299eb;
 }
 
-#graphic1{
+#testimonials{
+    background-color: #4299eb;
+}
+
+/* #graphic1{
     width: 160px;
     height: 160px;
+} */
+
+.testimonialCard{
+    background-color: white;
+    max-width: 900px;
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 0.1fr 1fr 0.1fr;
+    column-gap: 5px;
+    justify-content: center;
+    border-radius: 25px;
+    margin: auto;
 }
 
-#description{
-    width: 500px;
+#testimonialHeader{
+    padding-top: 20px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+.testimonialName{
+    text-align: center;
+}
+
+.largeQuote{
+    font-size: 100px;
+    color: green;
+    font:600;
+}
+
+#findMentorButton{
+    /* padding-right: 20px; */
+}
+
+#buttonContainer{
+    gap: 30px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.testimonialPicture{
+    max-width: 250px;
+    display: block;
+    margin: auto;   
+    padding-top: 30px;
+}
+
+.whiteText {
+    color: white;
+}
+
+.smallSpacer {
+    font-size: 10%;
+}
+
+.rightHalfOfTestimonialBox {
+    /* margin-bottom: 30px; */
+    font-size: large;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
