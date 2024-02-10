@@ -1,7 +1,8 @@
 // Filename - Landing.jsx
 import React from "react";
 import "./Landing.css"
- 
+import { Link } from "react-router-dom"; 
+
 const Landing = () => {
     return (
         <div>
@@ -26,7 +27,24 @@ const Landing = () => {
                 </div>
             </div>
 
-
+            <div>
+                <h1>Text-based nav-bar</h1>
+                <br />
+                <ul>
+                    <li>
+                        {/* Endpoint to route to Home component */}
+                        <Link to="/">Landing</Link>
+                    </li>
+                    <li>
+                        {/* Endpoint to route to About component */}
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li>
+                        {/* Endpoint to route to Contact Us component */}
+                        <Link to="/home">Home</Link>
+                    </li>
+                </ul>
+            </div>
 
             
         </div>

@@ -10,9 +10,9 @@ import {
 } from "react-router-dom";
  
 // import Home component
-import Home from "./components/Home";
+import Home from "./pages/Home";
 // import About component
-import About from "./components/About";
+import About from "./pages/About";
 // import ContactUs component
 import Landing from "./pages/Landing";
  
@@ -26,7 +26,7 @@ function App() {
                     <Route
                         exact
                         path="/"
-                        element={<Home />}
+                        element={<Landing />}
                     />
  
                     {/* This route is for about component with exact path "/about", in component props we passes the imported component*/}
@@ -37,8 +37,8 @@ function App() {
  
                     {/* This route is for landing component with exact path "/contactus", in component props we passes the imported component*/}
                     <Route
-                        path="/landing"
-                        element={<Landing />}
+                        path="/home"
+                        element={<Home />}
                     />
  
                     {/* If any route mismatches the upper  route endpoints then, redirect triggers and redirects app to home component with to="/" */}
