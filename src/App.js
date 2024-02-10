@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Landing from "./pages/Landing";
+import Chat from "./pages/Chat";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -33,11 +34,18 @@ function App() {
                         element={<About />}
                     />
  
-                    {/* This route is for landing component with exact path "/contactus", in component props we passes the imported component*/}
+                    {/* This route is for landing component with exact path "/landing", in component props we passes the imported component*/}
                     <Route
                         path="/home"
                         element={<Home />}
                     />
+
+                    {/* This route is for chat component with exact path "/chat", in component props we passes the imported component*/}
+                    <Route
+                        path="/chat"
+                        element={<Chat />}
+                    />
+                    
  
                     {/* If any route mismatches the upper  route endpoints then, redirect triggers and redirects app to home component with to="/" */}
                     {/* <Redirect to="/" /> */}
