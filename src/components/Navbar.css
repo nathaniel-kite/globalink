@@ -16,3 +16,7 @@
 	height: 50px;
 	width: 1px;
 }
+
+.btn-sign-in {
+	border: thin solid #000000;
+}
