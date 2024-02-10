@@ -1,0 +1,28 @@
+
+/* 
+#searchBar {
+    background-color: gray;
+    width: 100%;
+    float: right;
+} */
+
+.msgText {
+    font-size: 17px;
+}
+
+.chatOverview {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+#markusChat{
+    margin-top: 10px;
+}
+
+.headshotDiv {
+    margin-right: 20px;
+}
+
+.tempFix{
+    padding-right: 0px;
+}
