@@ -1,3 +1,18 @@
 .navbar-bg {
 	background-color: #BADAFF;
 }
+
+.navbar-text {
+	font-size: 22px;
+}
+
+.nav-text-big {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.v-line {
+	border-left: thin solid #000000;
+	height: 50px;
+	width: 1px;
+}
