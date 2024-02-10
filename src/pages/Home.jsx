@@ -9,12 +9,13 @@ import "./Home.css";
 
 import Card from "./../components/Card.jsx"
 import Card_Mentors from "./../components/Card_Mentors.jsx"
+import Navbar from "../components/Navbar.jsx";
 
 const Home = () => {
     return (
         <div id="home-container">
-            <div id="nav">
-                <h3>navbar</h3>
+            <div>
+                <Navbar/>
             </div>
             
             <div id="content-container">
