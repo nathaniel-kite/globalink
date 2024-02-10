@@ -10,7 +10,7 @@ import Navbar from "./../components/Navbar.jsx"
 const Landing = () => {
     return (
         <div > 
-            <Navbar bold_page="none" signed_in="true"></Navbar>
+            <Navbar bold_page="none" signed_in="false"></Navbar>
             <div id="topContainer" class="d-flex flex-row mb-2 justify-content-center container mt-3">
                 <div id="leftPartTop" class="p-4 d-flex flex-column">
                     <h1 id="test">Welcome to <span id="bluePartHeader">GlobalLink!</span></h1>
