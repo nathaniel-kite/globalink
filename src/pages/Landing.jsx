@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import "./../assets/connection.png"
 import "./../assets/Nikolas.png"
 import "./../assets/Maria.png"
+import Navbar from "./../components/Navbar.jsx"
 
 const Landing = () => {
     return (
         <div > 
-            <div id="topContainer" class="d-flex flex-row mb-2 justify-content-center container">
+            <Navbar bold_page="none" signed_in="true"></Navbar>
+            <div id="topContainer" class="d-flex flex-row mb-2 justify-content-center container mt-3">
                 <div id="leftPartTop" class="p-4 d-flex flex-column">
                     <h1 id="test">Welcome to <span id="bluePartHeader">GlobalLink!</span></h1>
                     <p>Our mission is to provide immigrants with the resources they need to feel secure in the US, with a priority on <span class="fw-bold">finding 
