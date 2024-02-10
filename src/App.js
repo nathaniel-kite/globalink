@@ -1,7 +1,11 @@
-// Filename - App.js
- 
 import "./App.css";
-// importing components from react-router-dom package
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Landing from "./pages/Landing";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import {
     BrowserRouter as Router,
     Routes,
@@ -9,16 +13,10 @@ import {
     Navigate,
 } from "react-router-dom";
  
-// import Home component
-import Home from "./pages/Home";
-// import About component
-import About from "./pages/About";
-// import ContactUs component
-import Landing from "./pages/Landing";
- 
 function App() {
     return (
         <>
+        
             {/* This is the alias of BrowserRouter i.e. Router */}
             <Router>
                 <Routes>
@@ -26,7 +24,7 @@ function App() {
                     <Route
                         exact
                         path="/"
-                        element={<Landing />}
+                        element={<Home />}
                     />
  
                     {/* This route is for about component with exact path "/about", in component props we passes the imported component*/}
@@ -37,8 +35,8 @@ function App() {
  
                     {/* This route is for landing component with exact path "/contactus", in component props we passes the imported component*/}
                     <Route
-                        path="/home"
-                        element={<Home />}
+                        path="/landing"
+                        element={<Landing />}
                     />
  
                     {/* If any route mismatches the upper  route endpoints then, redirect triggers and redirects app to home component with to="/" */}
