@@ -1,0 +1,57 @@
+/* main div for home page */
+#content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Navbar CSS */
+#nav {
+    display: flex;
+    background-color: blue;
+    text-align: center;
+}
+
+#nav.h3 {
+    margin: auto;
+}
+
+/* Content of Home Page */
+.home-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-card, .card{
+    display: flex;
+    flex-direction: row;
+    border-color: black;
+    width: '18rem';
+}
+
+/* card css */
+
+.mentor-card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.mentor-card-img {
+    display: flex;
+    flex-direction: column;
+}
+/* mentor card css */
+
+.pic-frame {
+    width: 2rem;
+    height: 2rem;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 50%;
+}
+
+.card-img-top {
+    height: 20%;
+        aspect-ratio: 1;
+}
+
+/* mentor card mentor image css */
