@@ -14,7 +14,7 @@ import Home from "./components/Home";
 // import About component
 import About from "./components/About";
 // import ContactUs component
-import Landing from "./components/Landing";
+import Landing from "./pages/Landing";
  
 function App() {
     return (
