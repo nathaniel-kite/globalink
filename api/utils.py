@@ -2,7 +2,6 @@ import pymongo
 import pprint
 from pymongo import MongoClient 
 # from models.mentee import Mentee
-from flask import Flask, jsonify, request
 # import sys
 
 # sys.path.append("..")
@@ -20,8 +19,8 @@ mentor_collection = db['mentor']
 
 # FOR TESTING PURPOSES 
 def main(): 
-    clear_mentees(mentee_collection) 
-    clear_mentors(mentor_collection) 
+    clear_mentees() 
+    clear_mentors() 
     test_mentee_data = {'first_name': 'sammy', 'last_name': 'beard', 'username': 'sam8beard', 'password': '1234', 'profilePic': 'test'}
     test_mentor_data1 = {'name': 'Nate Kite', 'origin_country': 'Slovakia', 'description': 'Eyes of emerald that shimmer under the sunlight', 'current_rate': 50, 
                         'languages': ['spanish, proficient', 'english, fluent'], 'sklls': ['talking', 'coding']}
@@ -36,8 +35,9 @@ def main():
     search_mentee_by_name('sammy','beard')
     search_mentor_by_language(['spanish, proficient', 'english, fluent']) 
 
-    mentors = get_all_mentors(mentor_collection)
+    mentors = get_all_mentors()
     pprint.pprint(mentors)
+
 def clear_mentees(): 
     mentee_collection.delete_many({})
 
