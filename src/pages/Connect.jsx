@@ -32,6 +32,7 @@ const Connect = () => {
 							current_role={mentor.current_role}
 							description={mentor.description}
 							languages={mentor.languages}
+							current_location={mentor.current_location}
 							skills={mentor.skills}
 							profile_pic={mentor.profile_pic}>
 						</MentorDisplay>

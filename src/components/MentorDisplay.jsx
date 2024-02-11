@@ -22,7 +22,7 @@ const MentorDisplay = (props) => {
 						</div>
 						<div class="flex-row d-flex align-center">
 							<img src={require('../assets/location_icon.png')} width="30" height="30"></img>
-							<p class="ps-2 less-margin"><span style={{fontWeight: 600}}>Current Location:</span> Atlanta</p>
+							<p class="ps-2 less-margin"><span style={{fontWeight: 600}}>Current Location:</span> {props.current_location}</p>
 						</div>
 						<div class="flex-row d-flex align-center">
 							<img src={require('../assets/work_icon.png')} width="30" height="30"></img>
