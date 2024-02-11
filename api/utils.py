@@ -116,4 +116,8 @@ def search_mentor_by_language(languages):
     pprint.pprint(mentor)
     return mentor 
     
+
+def insert_mentee(mentee_to_insert): 
+    mentee_collection.insert_one(mentee_to_insert)
+    
 main()

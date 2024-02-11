@@ -1,6 +1,6 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 import json
-from utils import get_all_mentors, insert_one
+from utils import get_all_mentors, insert_mentee
 
 app = Flask(__name__)
 
@@ -15,4 +15,7 @@ def get_all_mentors_endpoint():
 
 @app.route("/api/register", methods=["POST"])
 def register():
+
+	insert_mentee(request.json)
+
 	return {"message": "Not implemented."}

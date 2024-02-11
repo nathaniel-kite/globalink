@@ -16,7 +16,7 @@ const CreateProfile = () => {
 			password: form.password.value,
 			first_name: form.first_name.value,
 			last_name: form.last_name.value,
-			origin_country: form.origin_country,
+			origin_country: form.origin_country.value,
 			languages: [
 				{
 					name: form.language_1.value,
@@ -36,12 +36,17 @@ const CreateProfile = () => {
 			description: form.description.value
 		}
 
+		console.log(submissionData);
+
 		fetch('/api/register', {
 			method: 'POST',
-			body: submissionData
+			headers: {
+				'Content-Type': 'application/json' // Specify content type as JSON
+			  },
+			body: JSON.stringify(submissionData)
 		})
-		.then(res => res.json())
-		.then(data => alert(data));
+
+		window.location.href = "/connect";
 	}
 
 	return (
