@@ -1,9 +1,20 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Navbar from "../components/Navbar"
 
 import './CreateProfile.css'
 
 const CreateProfile = () => {
+
+	const [userInfo, setUserInfo] = useState(null);
+	const [signedIn, setSignedIn] = useState(null);
+
+	useEffect(() => {
+		var info = sessionStorage.getItem("user_info");
+		var signed_in = sessionStorage.getItem("signed_in");
+
+		setUserInfo(JSON.parse(info));
+		setSignedIn(signed_in);
+	}, [])
 
 	function handleSubmission() {
 		const form = document.getElementById('profileForm');
@@ -32,6 +43,7 @@ const CreateProfile = () => {
 				}
 			],
 			education: form.education.value,
+			industry: form.industry.value,
 			current_location: form.current_location.value,
 			description: form.description.value
 		}
@@ -42,16 +54,20 @@ const CreateProfile = () => {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json' // Specify content type as JSON
-			  },
+			},
 			body: JSON.stringify(submissionData)
 		})
+
+		sessionStorage.setItem("signed_in", true);
+		sessionStorage.setItem("user_info", JSON.stringify(submissionData));
+		sessionStorage.setItem("username", submissionData.username);
 
 		window.location.href = "/connect";
 	}
 
 	return (
 		<div style={{background: '#F0F8FF', height: '100%'}}>
-			<Navbar bold_page="profile" signed_in="false"></Navbar>
+			<Navbar bold_page="profile" signed_in={signedIn}></Navbar>
 			<form class="default-text-create-profile" id="profileForm">
 				<div class="container py-3" style={{maxWidth: '1000px'}}>
 					<h1 class="px-5 py-3">Create Mentee Profile</h1>
@@ -103,6 +119,8 @@ const CreateProfile = () => {
 						</div>
 						<label for="education" class="form-label">Education</label>
 						<input type="text" class="form-control mb-3" id="education" name="education" placeholder="Your highest level of education (eg. 'B.S. Computer Science')"></input>
+						<label for="industry" class="form-label">Industry</label>
+						<input type="text" class="form-control mb-3" id="industry" name="industry" placeholder="The industry you'd like to work in (eg. Tech, Entertainment)"></input>
 						<label for="current_location" class="form-label">Current Location</label>
 						<input type="text" class="form-control mb-3" id="current_location" name="current_location" placeholder="(eg. Atlanta, Georgia)"></input>
 						<label for="current_location" class="form-label">Description</label>

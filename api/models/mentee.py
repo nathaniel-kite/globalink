@@ -15,3 +15,4 @@ class Mentee:
         self.country_of_origin = country_of_origin 
         self.languages = languages 
         self.current_location = current_location 
+        self.industry = industry
