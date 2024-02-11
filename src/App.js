@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Landing from "./pages/Landing";
 import Chat from "./pages/Chat";
 import Connect from "./pages/Connect";
+import CreateProfile from "./pages/CreateProfile";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -53,6 +54,11 @@ function App() {
                         element={<Connect />}
                     />                    
                     
+                    <Route
+                        path="/create-profile"
+                        element={<CreateProfile />}
+                    />   
+
  
                     {/* If any route mismatches the upper  route endpoints then, redirect triggers and redirects app to home component with to="/" */}
                     {/* <Redirect to="/" /> */}

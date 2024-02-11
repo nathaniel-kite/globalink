@@ -1,0 +1,23 @@
+.question-card {
+	background: #FFFFFF;
+	border: solid rgba(5, 0, 255, 0.16) 1px;
+	border-radius: 30px;
+	box-shadow: 4px 4px 3px 1px rgba(80, 80, 80, 0.5);
+	max-width: 1000px;
+}
+
+.green-circle {
+	background: green;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+}
+
+.default-text {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.limit-width {
+	max-width: 600px
+}

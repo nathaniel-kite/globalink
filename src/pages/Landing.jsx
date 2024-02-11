@@ -1,7 +1,6 @@
 // Filename - Landing.jsx
 import React from "react";
 import "./Landing.css"
-import { Link } from "react-router-dom"; 
 import "./../assets/connection.png"
 import "./../assets/Nikolas.png"
 import "./../assets/Maria.png"
@@ -46,9 +45,9 @@ const Landing = () => {
                             <p class="largeQuote">"</p>
                         </div>
                         <div class="rightHalfOfTestimonialBox">
-                            <p><span class="whiteText">.....   </span>Coming from Russia, I knew nobody in the United States I was not used 
+                            <p><span class="whiteText">.....   </span>Coming from Russia, I knew nobody in the United States. I was not used 
                                 to how the job search works here, and I was looking for some guidance.
-                                One of my family friends suggested To try GlobaLink, so I made an 
+                                One of my family friends suggested to try GlobaLink, so I made an 
                                 account and was connected with some mentors.</p>
 
                             <p> <span class="whiteText">.....   </span>Immediately, Vladmir stood out to me because I saw he also
