@@ -39,26 +39,26 @@ def main():
     sofia_data = {'name': 'Sofia Gonzalez', 'origin_country': 'Columbia', 
                   'description': 'Hi, my name is Sofia Gonzalez and I am a project manager with 25+ years of experience in the corporate world. I would love to chat!', 
                   'current_role': 'Project Manager at Microsoft', 'languages': sofia_languages, 'skills': ['Retirement Funds', 'Networking', 'Management Roles', 'Finance Management'], 
-                  'profile_pic': 'globalink\src\assets\sofia.png',
+                  'profile_pic': 'sofia.png',
                    'current_location': 'Atlanta, Georgia'}
     
     carlos_data = {'name': 'Carlos Vargas', 'origin_country': 'Mexico', 
                    'description': 'Hello, I would love to chat about anything from career work, acclimating to the US, or basketball. Feel free to reach out!',
                    'current_role': 'Creative Directory at ESPN', 'languages': carlos_languages,
                    'skills': ['Work-Life Balance', 'Networking', 'Adjusting to Culture', 'Visa Issues'], 
-                   'profile_pic': 'globalink\src\assets\carlos.png',
+                   'profile_pic': 'carlos.png',
                    'current_location': 'Atlanta, Georgia'}
     chris_data = {'name': 'Chris Williams', 'origin_country': 'South Africa', 
                    'description': 'Hi, I love all things software and tech. Do not hesitate to reach out if you want to geek out about coding or talk about the job search process!',
                    'current_role': 'Software Developer at Google', 'languages': chris_languages,
                    'skills': ['Cloud Computing', 'API Development', 'AGILE', 'Interview Skills', 'Dynamic Programming'], 
-                   'profile_pic': 'globalink\src\assets\chris.png',
+                   'profile_pic': 'chris.png',
                    'current_location': 'Charleston, South Carolina'}
     markus_data = {'name': 'Markus Wagner', 'origin_country': 'Germany', 
                    'description': 'Hey there! My name is Markus, I would love to speak about my experiences and get the opportunity to guide you.',
                    'current_role': 'Technical Counsultant at Apple', 'languages': markus_languages,
                    'skills': ['Interpersonal Skills', 'Time Management', 'Language Learning', 'Self-Employment'], 
-                   'profile_pic': 'globalink\src\assets\markus.png',
+                   'profile_pic': 'markus.png',
                    'current_location': 'Silicon Valley, California'}
     
     
