@@ -14,18 +14,47 @@ const Connect = () => {
 	const [signedIn, setSignedIn] = useState(null);
 
 	useEffect(() => {
+
+		var info = sessionStorage.getItem("user_info");
+		var signed_in = sessionStorage.getItem("signed_in");
+
+		/*
 		fetch("api/get-all-mentors")
 			.then(res => res.json())
 			.then(data => setMentors({
 				list: data.mentors,
 				data_received: true
 			}));
+		*/
 
-		var info = sessionStorage.getItem("user_info");
-		var signed_in = sessionStorage.getItem("signed_in");
+		if (signed_in) {
+			fetch('api/get-selected-mentors', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json' // Specify content type as JSON
+				  },
+				body: JSON.stringify(info)
+			})
+			.then(res => res.json())
+			.then(data => setMentors({
+				list: data.mentors,
+				data_received: true
+			}));
+
+		} else {
+			fetch("api/get-all-mentors")
+				.then(res => res.json())
+				.then(data => setMentors({
+					list: data.mentors,
+					data_received: true
+				}));
+		}
+
+		
 
 		setUserInfo(JSON.parse(info));
 		setSignedIn(signed_in);
+		
 	}, [])
 
 	return (

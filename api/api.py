@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 import json
-from utils import get_all_mentors, insert_mentee, check_account
+from utils import get_all_mentors, insert_mentee, check_account, match_mentors_with_mentees
 
 app = Flask(__name__)
 
@@ -20,7 +20,6 @@ def register():
 
 	return {"message": "User registered successfully."}
 
-
 @app.route('/api/login', methods=['POST'])
 def login():
 	username = request.json.get('username')
@@ -31,3 +30,16 @@ def login():
 	print(account_check)
 
 	return json.dumps(account_check, default=str)
+
+@app.route('/api/get-selected-mentors', methods=['POST'])
+def get_selected_mentors():
+
+	print("request.json")
+
+	industry = request.json.get('industry')
+	matches = match_mentors_with_mentees()
+
+	for match in matches:
+		print(match)
+	
+	return json.dumps(None)

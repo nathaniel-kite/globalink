@@ -7,7 +7,7 @@ const MentorDisplay = (props) => {
 		<div class="container mentor-display my-4 mentor-text-default">
 			<div class="flex-row vertical-align-center d-flex py-3">
 				<div class="d-flex justify-content-center px-5 my-auto">
-					<img src={require('../assets/' + props.profile_pic)} width="175" height="175"></img>
+					<img src={require('../assets/' + props.profile_pic)} width="175" height="175" style={{borderRadius: '50%'}}></img>
 				</div>
 				<div class="flex-fill pt-2">
 					<h2>{props.name}</h2>

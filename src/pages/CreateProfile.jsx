@@ -43,6 +43,7 @@ const CreateProfile = () => {
 				}
 			],
 			education: form.education.value,
+			industry: form.industry.value,
 			current_location: form.current_location.value,
 			description: form.description.value
 		}
@@ -53,7 +54,7 @@ const CreateProfile = () => {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json' // Specify content type as JSON
-			  },
+			},
 			body: JSON.stringify(submissionData)
 		})
 
@@ -118,6 +119,8 @@ const CreateProfile = () => {
 						</div>
 						<label for="education" class="form-label">Education</label>
 						<input type="text" class="form-control mb-3" id="education" name="education" placeholder="Your highest level of education (eg. 'B.S. Computer Science')"></input>
+						<label for="industry" class="form-label">Industry</label>
+						<input type="text" class="form-control mb-3" id="industry" name="industry" placeholder="The industry you'd like to work in (eg. Tech, Entertainment)"></input>
 						<label for="current_location" class="form-label">Current Location</label>
 						<input type="text" class="form-control mb-3" id="current_location" name="current_location" placeholder="(eg. Atlanta, Georgia)"></input>
 						<label for="current_location" class="form-label">Description</label>
