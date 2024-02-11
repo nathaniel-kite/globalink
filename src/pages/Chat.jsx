@@ -1,14 +1,24 @@
-// Chat.jsx
-
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Navbar from "../components/Navbar"
 import "./../assets/sofia.png"
 import "./Chat.css"
 
 const Chat = () => {
+
+	const [userInfo, setUserInfo] = useState(null);
+	const [signedIn, setSignedIn] = useState(null);
+
+    useEffect(() => {
+		var info = sessionStorage.getItem("user_info");
+		var signed_in = sessionStorage.getItem("signed_in");
+
+		setUserInfo(JSON.parse(info));
+		setSignedIn(signed_in);
+	}, [])
+
 	return (
 		<div>
-			<Navbar bold_page="chats" signed_in="true"></Navbar>
+			<Navbar bold_page="chats" signed_in={signedIn}></Navbar>
             <div class="container bg-success-subtle">
                 <text>overall container</text>
                 <div class="row">

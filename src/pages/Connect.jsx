@@ -10,6 +10,8 @@ const Connect = () => {
 	}
 
 	const [mentors, setMentors] = useState(default_state);
+	const [userInfo, setUserInfo] = useState(null);
+	const [signedIn, setSignedIn] = useState(null);
 
 	useEffect(() => {
 		fetch("api/get-all-mentors")
@@ -18,11 +20,17 @@ const Connect = () => {
 				list: data.mentors,
 				data_received: true
 			}));
+
+		var info = sessionStorage.getItem("user_info");
+		var signed_in = sessionStorage.getItem("signed_in");
+
+		setUserInfo(JSON.parse(info));
+		setSignedIn(signed_in);
 	}, [])
 
 	return (
 		<div style={{background: '#F0F8FF', height: '100%'}}>
-			<Navbar bold_page="connect" signed_in="false"></Navbar>
+			<Navbar bold_page="connect" signed_in={signedIn}></Navbar>
 			<div class="container py-3" style={{maxWidth: '1000px'}}>
 				<h1 class='px-3'>Your Mentor Recommendations</h1>
 				{mentors.data_received &&

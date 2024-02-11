@@ -1,9 +1,20 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Navbar from "../components/Navbar"
 
 import './CreateProfile.css'
 
 const CreateProfile = () => {
+
+	const [userInfo, setUserInfo] = useState(null);
+	const [signedIn, setSignedIn] = useState(null);
+
+	useEffect(() => {
+		var info = sessionStorage.getItem("user_info");
+		var signed_in = sessionStorage.getItem("signed_in");
+
+		setUserInfo(JSON.parse(info));
+		setSignedIn(signed_in);
+	}, [])
 
 	function handleSubmission() {
 		const form = document.getElementById('profileForm');
@@ -46,12 +57,16 @@ const CreateProfile = () => {
 			body: JSON.stringify(submissionData)
 		})
 
+		sessionStorage.setItem("signed_in", true);
+		sessionStorage.setItem("user_info", JSON.stringify(submissionData));
+		sessionStorage.setItem("username", submissionData.username);
+
 		window.location.href = "/connect";
 	}
 
 	return (
 		<div style={{background: '#F0F8FF', height: '100%'}}>
-			<Navbar bold_page="profile" signed_in="false"></Navbar>
+			<Navbar bold_page="profile" signed_in={signedIn}></Navbar>
 			<form class="default-text-create-profile" id="profileForm">
 				<div class="container py-3" style={{maxWidth: '1000px'}}>
 					<h1 class="px-5 py-3">Create Mentee Profile</h1>

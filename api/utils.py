@@ -1,4 +1,5 @@
 import pymongo 
+from flask import jsonify
 import pprint
 from pymongo import MongoClient 
 # from models.mentee import Mentee
@@ -119,5 +120,13 @@ def search_mentor_by_language(languages):
 
 def insert_mentee(mentee_to_insert): 
     mentee_collection.insert_one(mentee_to_insert)
-    
+
+def get_mentee_by_username(username): 
+    mentee = mentee_collection.find_one({'username': username})
+    return mentee 
+
+def check_account(username, password): 
+    matched_users = mentee_collection.find_one({'username': username, 'password': password})
+    return matched_users
+
 main()
