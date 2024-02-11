@@ -20,7 +20,7 @@ const Landing = () => {
                     <span class="fw-bold"> seeking mentorship</span> with <span class="fw-bold">seasoned mentors.</span> </p>
                     
                     <div class="d-flex flex-row" id="buttonContainer">
-                        <button id="findMentorButton" type="button" class="btn btn-success">Find Your Mentor ⟶</button>
+                        <button id="findMentorButton" type="button" class="btn default-text btn-success">Find Your Mentor ⟶</button>
                         <button id="becomeMentorButton" type="button" class="btn default-text btn-success">Become a Mentor ⟶</button>
                     </div>
                     <p><span class="fst-italic default-text">Already have an account?</span> <span  class="text-decoration-underline">Sign In</span>  </p>

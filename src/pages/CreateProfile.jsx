@@ -8,7 +8,7 @@ const CreateProfile = () => {
 	return (
 		<div style={{background: '#F0F8FF', height: '100%'}}>
 			<Navbar bold_page="profile" signed_in="false"></Navbar>
-			<form action="/create-profile" method="post" class="default-text">
+			<form action="/api/create-profile" method="post" class="default-text-create-profile">
 				<div class="container py-3" style={{maxWidth: '1000px'}}>
 					<h1 class="px-5 py-3">Create Mentee Profile</h1>
 					<div class="question-card d-flex flex-column px-5 py-3 mb-4">
@@ -51,7 +51,10 @@ const CreateProfile = () => {
 						<label for="current-location" class="form-label">Current Location</label>
 						<input type="text" class="form-control mb-3" id="education" name="education" placeholder="(eg. Atlanta, Georgia)"></input>
 						<label for="current-location" class="form-label">Description</label>
-						<input type="textarea" class="form-control mb-3" id="education" name="description" placeholder="Tell us a little about yourself. What do you hope to get out of your mentorship?"></input>
+						<textarea class="form-control mb-3" id="education" name="description" placeholder="Tell us a little about yourself. What are you hoping for help with?"></textarea>
+					</div>
+					<div class='d-flex justify-content-center my-4'>
+						<button class='btn btn-success default-text-create-profile'>Create Profile</button>
 					</div>
 				</div>
 			</form>
