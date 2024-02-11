@@ -1,28 +1,235 @@
+:root {
+    --input-color: rgba(128, 128, 128, 0.151);
+    --chat-color: rgb(240, 248, 255);
+}
 
-/* 
-#searchBar {
-    background-color: gray;
+
+/* Chat Styling */
+
+.chatContainer {
     width: 100%;
-    float: right;
-} */
-
-.msgText {
-    font-size: 17px;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }
 
-.chatOverview {
-    margin-left: 8px;
-    margin-right: 8px;
-}
 
-#markusChat{
-    margin-top: 10px;
-}
+    /* ChatAside Styling */
 
-.headshotDiv {
-    margin-right: 20px;
-}
+    .chatAside {
+        display: grid;
+        grid-template-rows: .5fr 4fr;
+        border-right: 3px solid black;
+    }
 
-.tempFix{
-    padding-right: 0px;
-}
+    .searchBar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .searchBarInput {
+        width: 90%;
+        height: 50%;
+        border-radius: 20px;
+        font-size: large;
+        padding-left: 15px;
+        background-color: var(--input-color);
+    }
+
+    .buttonsContainer {
+        height: 888px;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        align-content: start;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+
+    /* ChatButton Styling */
+
+    .chatButton {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        text-decoration: none;
+        padding-right: 20px;
+    }
+
+    .chatButton:hover {
+        /* If you want a hover effect for the buttons */
+    }
+
+    .chatImage {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bigChatImage {
+        width: 90px;
+        height: 90px;
+        border-radius: 90px;
+        border: 1px solid black;
+    }
+
+    .chatButtonContent {
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+    }
+
+    .chatButtonInfo {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        font-size: large;
+        color: black;
+    }
+
+    .chatButtonMsg {
+        width: 100%;
+        font-style: italic;
+        font-size: medium;
+        color: gray;
+    }
+
+
+    /* MainChatContainer Styling */
+
+    .mainChat {
+        display: grid;
+        grid-template-rows: .5fr 4fr 1fr;
+    }
+
+    .chatHeader {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        background-color: white;
+        box-shadow: 0 4px 2px -2px gray;
+        z-index: 0;
+    }
+
+    .activeChatImage {
+        width: 70px;
+        height: 70px;
+        margin: 0px 20px;
+        border: 1px solid black;
+        border-radius: 40px;
+    }
+
+    .smallChatImage {
+        width: 70px;
+        height: 70px;
+    }
+
+    .activeChatTitle {
+        font-size: x-large;
+    }
+
+    .messageContainer {
+        height: 727px;
+        background-color: var(--chat-color);
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: start;
+        row-gap: 20px;
+        padding: 30px 0px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .newMsgContainer {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        align-content: center;
+        border-top: 2px solid gray;
+    }
+
+    .newMsgContainer > * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .newMsgContainer > * > * {
+        font-size: xx-large;
+    }
+
+    .newMsgContainer textarea {
+        width: 95%;
+        height: 100px;
+        border-radius: 20px;
+        resize: none;
+        padding-left: 15px;
+        background-color: var(--input-color);
+    }
+
+    .newMsgContainer button {
+        border-radius: 40px;
+        height: 70%;
+        width: 60%;
+        background-color: rgb(37, 226, 101);
+    }
+
+    /* IndividualChat Styling */
+
+    .leftChat {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+    .rightChat {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .rightChat > * {
+        margin-right: 50px;
+    }
+
+    .chat {
+        width: 600px;
+        height: max-content;
+        display: grid;
+        grid-template-rows: 90px 3fr;
+        border: .5px solid rgba(0, 0, 0, 0.158);
+        border-radius: 20px;
+        background-color: white;
+    }
+
+    .shadow {
+        box-shadow: 2px 4px 2px -2px gray;
+    }
+
+    .messageHeader {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: large;
+    }
+
+    .messageContent {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .messageContent > * {
+        width: 90%;
+        margin: 5px 0px 30px;
+        font-size: large;
+    }
