@@ -32,7 +32,6 @@ def get_all_mentors():
         #pprint.pprint(doc)
     return mentors
 
-
 # TO DO 
 # def put_mentee(mentee): 
 
@@ -62,7 +61,6 @@ def search_mentor_by_language(languages):
     mentor = mentor_collection.find_one({'languages': languages})
     pprint.pprint(mentor)
     return mentor 
-    
 
 def insert_mentee(mentee_to_insert): 
     mentee_collection.insert_one(mentee_to_insert)

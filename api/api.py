@@ -34,12 +34,16 @@ def login():
 @app.route('/api/get-selected-mentors', methods=['POST'])
 def get_selected_mentors():
 
-	print("request.json")
+	print('\n\n\n\\n\n\n\n\n\n\n tjkljfdlksajfdsaf \n\n\n\n\n')
+	print(request.json)
+	print('\n\n\n\n\n\n\n\n\n')
 
-	industry = request.json.get('industry')
-	matches = match_mentors_with_mentees()
+	request_json = json.loads(request.json)
 
-	for match in matches:
-		print(match)
-	
-	return json.dumps(None)
+	industry = request_json["industry"]
+	print(industry)
+
+	matches = match_mentors_with_mentees(industry)
+
+	mentor_list = {"mentors": match_mentors_with_mentees(industry)}
+	return json.dumps(mentor_list, default=str)
