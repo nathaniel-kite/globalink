@@ -1,0 +1,27 @@
+.mentor-display {
+	background: #FFFFFF;
+	border: solid rgba(5, 0, 255, 0.16) 1px;
+	border-radius: 30px;
+	box-shadow: 4px 4px 3px 1px rgba(80, 80, 80, 0.5);
+	max-width: 1000px;
+}
+
+.mentor-text-default {
+	font-size: 18px;
+}
+
+.less-margin {
+	margin-bottom: 7px;
+}
+
+h2 {
+	font-size: 35px;
+}
+
+.skill-box {
+	background: rgba(215, 238, 255, 1);
+	border-radius: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 2px 7px 3px 7px;
+}

@@ -9,22 +9,22 @@ import Navbar from "./../components/Navbar.jsx"
 
 const Landing = () => {
     return (
-        <div > 
+        <div> 
             <Navbar bold_page="none" signed_in="false"></Navbar>
             <div id="topContainer" class="d-flex flex-row mb-2 justify-content-center container mt-3">
                 <div id="leftPartTop" class="p-4 d-flex flex-column">
                     <h1 id="test">Welcome to <span id="bluePartHeader">GlobalLink!</span></h1>
-                    <p>Our mission is to provide immigrants with the resources they need to feel secure in the US, with a priority on <span class="fw-bold">finding 
+                    <p class="default-text">Our mission is to provide immigrants with the resources they need to feel secure in the US, with a priority on <span class="fw-bold">finding 
                     employment </span> and <span class="fw-bold">navigating the visa process</span></p>
 
-                    <p>We offer a <span class="fw-bold">connective experience</span> that seamlessly pairs immigrants 
+                    <p class="default-text">We offer a <span class="fw-bold">connective experience</span> that seamlessly pairs immigrants 
                     <span class="fw-bold"> seeking mentorship</span> with <span class="fw-bold">seasoned mentors.</span> </p>
                     
                     <div class="d-flex flex-row" id="buttonContainer">
                         <button id="findMentorButton" type="button" class="btn btn-success">Find Your Mentor ⟶</button>
-                        <button id="becomeMentorButton" type="button" class="btn btn-success">Become a Mentor ⟶</button>
+                        <button id="becomeMentorButton" type="button" class="btn default-text btn-success">Become a Mentor ⟶</button>
                     </div>
-                    <p><span class="fst-italic">Already have an account?</span> <span  class="text-decoration-underline">Sign In</span>  </p>
+                    <p><span class="fst-italic default-text">Already have an account?</span> <span  class="text-decoration-underline">Sign In</span>  </p>
                 </div>
                 <div id="rightPartTop" class="p-2"> 
                     <img src={require("./../assets/connection.png")}alt="connection graphic" id="graphic1"/>
@@ -99,33 +99,7 @@ const Landing = () => {
 
 
                 </div>
-            </div>
- 
-
-
-
-
-
-            <div>
-                <h1>Text-based nav-bar</h1>
-                <br />
-                <ul>
-                    <li>
-                        {/* Endpoint to route to Home component */}
-                        <Link to="/">Landing</Link>
-                    </li>
-                    <li>
-                        {/* Endpoint to route to About component */}
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        {/* Endpoint to route to Contact Us component */}
-                        <Link to="/home">Home</Link>
-                    </li>
-                </ul>
-            </div>
-
-            
+            </div>            
         </div>
     );
 };

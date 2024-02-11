@@ -10,6 +10,10 @@
     max-width: 600px;
 }
 
+.default-text {
+    font-size: 18px;
+}
+
 /* #graphic1 {
     display: block;
     height: auto;

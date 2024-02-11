@@ -5,11 +5,12 @@
 }
 
 /* Navbar CSS */
-#nav {
+
+/* #nav {
     display: flex;
     background-color: blue;
     text-align: center;
-}
+} */
 
 #nav.h3 {
     margin: auto;

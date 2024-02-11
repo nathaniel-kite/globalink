@@ -12,3 +12,4 @@ The following python libraries are required as well:
 
 - `pip install flask`
 - `pip install pymongo`
+- `pip install python-dotenv`
