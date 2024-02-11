@@ -1,5 +1,5 @@
 // Filename - Landing.jsx
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./Landing.css"
 import "./../assets/connection.png"
 import "./../assets/Nikolas.png"
@@ -7,9 +7,20 @@ import "./../assets/Maria.png"
 import Navbar from "./../components/Navbar.jsx"
 
 const Landing = () => {
+    const [userInfo, setUserInfo] = useState(null);
+	const [signedIn, setSignedIn] = useState(null);
+
+	useEffect(() => {
+		var info = sessionStorage.getItem("user_info");
+		var signed_in = sessionStorage.getItem("signed_in");
+
+		setUserInfo(JSON.parse(info));
+		setSignedIn(signed_in);
+	}, [])
+
     return (
         <div> 
-            <Navbar bold_page="none" signed_in="false"></Navbar>
+            <Navbar bold_page="none" signed_in={signedIn}></Navbar>
             <div id="topContainer" class="d-flex flex-row mb-2 justify-content-center container mt-3">
                 <div id="leftPartTop" class="p-4 d-flex flex-column">
                     <h1 id="test">Welcome to <span id="bluePartHeader">GlobalLink!</span></h1>
@@ -20,10 +31,10 @@ const Landing = () => {
                     <span class="fw-bold"> seeking mentorship</span> with <span class="fw-bold">seasoned mentors.</span> </p>
                     
                     <div class="d-flex flex-row" id="buttonContainer">
-                        <button id="findMentorButton" type="button" class="btn default-text btn-success">Find Your Mentor ⟶</button>
+                        <a href={signedIn ? "/connect" : "/create-profile"}><button id="findMentorButton" type="button" class="btn default-text btn-success">Find Your Mentor ⟶</button></a>
                         <button id="becomeMentorButton" type="button" class="btn default-text btn-success">Become a Mentor ⟶</button>
                     </div>
-                    <p><span class="fst-italic default-text">Already have an account?</span> <span  class="text-decoration-underline">Sign In</span>  </p>
+                    {!signedIn && <p><span class="fst-italic default-text">Already have an account?</span> <a href="/login"><span class="text-decoration-underline">Sign In</span></a></p>}
                 </div>
                 <div id="rightPartTop" class="p-2"> 
                     <img src={require("./../assets/connection.png")}alt="connection graphic" id="graphic1"/>
@@ -95,8 +106,6 @@ const Landing = () => {
                     {/* I know this is terrible front-end code Im sorry Im sorry  */}
                     <br></br>
                     <br></br>
-
-
                 </div>
             </div>            
         </div>

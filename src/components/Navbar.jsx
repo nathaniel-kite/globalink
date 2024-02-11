@@ -22,7 +22,7 @@ const Navbar = (props) => {
 					: <a class="nav-link" href="/create-profile">Join Now</a>
 				}
 				{props.signed_in == "true"
-					? <img src={props.profile_pic} alt="profile" height="40" width="40"></img>
+					? <img src={require('../assets/default_user.png')} alt="profile" height="45" width="45" style={{borderRadius: '50%', border: 'solid black 1px'}}></img>
 					: <a class="nav-link" href="/" style={{fontWeight: 550}}>Sign In</a>
 				}
 			</div>
